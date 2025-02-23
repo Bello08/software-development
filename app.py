@@ -37,6 +37,8 @@ def diff():
     return render_template('show.html',division=k)
 
 @app.route("/sub")
+
+
 def subtract():
     a=90
     b=80
