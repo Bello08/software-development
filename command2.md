@@ -8,7 +8,10 @@
  $ docker build -t feyiimage .
 
   docker rmi image seunimage
-# ======================================================================================================
+# command to remove dockerimages using id
+
+ docker rmi a2eef81c3f89
+======================================
 # Apply force to delete 1st, 2nd, 3rd, 4th
  $ docker images purge
  $ docker images prune
@@ -36,7 +39,7 @@ bb0b75a1d316   feyiimage   "python ./main.py"   36 seconds ago   Up 35 seconds (
 # Command to check for running and unrunning containers
  $ docker ps
 # command to check for unrunning container
- $ docker ps -a
+ $ c
 
 # command to stop a running container
  $ docker stop feyi-container
@@ -49,3 +52,15 @@ bb0b75a1d316   feyiimage   "python ./main.py"   36 seconds ago   Up 35 seconds (
 # To create and  push an image to docker hub
  $ docker run --name rainbow-container -dp 5004:5004 feyidocker/rainbowimage:1.0
  $ docker push feyidocker/rainbowimage:1.0
+
+ # command to build image that you can push to dockerhub
+docker login -u=bello0
+docker build -t bello08/rate .
+
+# command to push dockerimage to dockerhub
+docker push bello08/image:latest
+
+ 
+
+
+
